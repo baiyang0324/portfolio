@@ -208,7 +208,7 @@ export default function AboutPage() {
             完整的 PDF 简历，包含个人优势、工作履历与项目详情
           </p>
           <a
-            href="/resume.pdf"
+            href="/portfolio/resume.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
