@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   全局基础样式 — TailwindCSS + 亮/暗模式
+   ============================================================ */
+
+@layer base {
+  /* 滚动条美化 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: #374151;
+  }
+
+  /* 选中文本颜色 */
+  ::selection {
+    background-color: #c026d3;
+    color: white;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* 打字机光标动画 */
+  .cursor-blink::after {
+    content: "|";
+    animation: cursor-blink 1s step-end infinite;
+    color: #c026d3;
+    font-weight: 100;
+  }
+
+  @keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* 代码块样式（markdown 渲染用） */
+  .prose pre {
+    @apply bg-gray-900 dark:bg-gray-950 text-gray-100 rounded-xl p-4 overflow-x-auto text-sm leading-relaxed;
+  }
+
+  .prose code {
+    @apply bg-gray-100 dark:bg-gray-800 text-primary-700 dark:text-primary-300 rounded px-1.5 py-0.5 text-sm font-mono;
+  }
+
+  .prose pre code {
+    @apply bg-transparent text-gray-100 dark:text-gray-100 p-0;
+  }
+
+  .prose {
+    @apply text-gray-700 dark:text-gray-300 leading-relaxed;
+  }
+
+  .prose h1, .prose h2, .prose h3 {
+    @apply text-gray-900 dark:text-white font-bold;
+  }
+
+  .prose a {
+    @apply text-primary-600 dark:text-primary-400 underline;
+  }
+
+  .prose ul {
+    @apply list-disc list-inside;
+  }
+
+  .prose ol {
+    @apply list-decimal list-inside;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-primary-500 pl-4 italic text-gray-500 dark:text-gray-400;
+  }
+
+  /* 流式对话气泡 */
+  .chat-bubble-user {
+    @apply bg-accent-600 text-white rounded-2xl rounded-br-md px-4 py-3 max-w-[85%] self-end;
+  }
+
+  .chat-bubble-ai {
+    @apply bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white rounded-2xl rounded-bl-md px-4 py-3 max-w-[85%] self-start;
+  }
+}
