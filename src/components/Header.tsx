@@ -30,7 +30,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2 group">
           <Code2 className="w-6 h-6 text-primary-600 dark:text-primary-400 group-hover:scale-110 transition-transform" />
           <span className="font-bold text-lg text-gray-900 dark:text-white">
-            ClaudeDev<span className="text-primary-600 dark:text-primary-400">.me</span>
+            王鼎心<span className="text-primary-600 dark:text-primary-400">个人作品</span>
           </span>
         </Link>
 

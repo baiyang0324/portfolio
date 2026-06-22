@@ -9,8 +9,8 @@ import ThemeProvider from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: {
-    default: "ClaudeDev.me — Claude 开发工程师作品集",
-    template: "%s | ClaudeDev.me",
+    default: "王鼎心个人作品 — Claude 开发工程师",
+    template: "%s | 王鼎心个人作品",
   },
   description:
     "独立全栈开发者，专注 Next.js + Claude API 技术栈。展示流式对话、RAG 检索增强生成、Function Calling 等 AI 全栈能力。",

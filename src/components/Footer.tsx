@@ -15,7 +15,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <Code2 className="w-5 h-5 text-primary-600 dark:text-primary-400" />
-              <span className="font-bold text-gray-900 dark:text-white">ClaudeDev.me</span>
+              <span className="font-bold text-gray-900 dark:text-white">王鼎心个人作品</span>
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-400">
               基于 Next.js 14 + Claude API 构建的<br />
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-4 border-t dark:border-gray-800 text-center text-sm text-gray-400 dark:text-gray-500">
-          © {year} ClaudeDev.me — Built with Next.js 14 + Anthropic Claude SDK
+          © {year} 王鼎心个人作品 — Built with Next.js 14 + Anthropic Claude SDK
         </div>
       </div>
     </footer>
